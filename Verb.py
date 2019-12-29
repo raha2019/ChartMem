@@ -146,32 +146,13 @@ quī.plural.ablative.append([''])
 
 #Verb Data
 
-class IterPerson(type):
-    def __iter__(cls):
-        return iter(cls._allPeople)
-
-
-class Person(metaclass=IterPerson):
-    _allPeople = []
-
-    def __init__(self, name, age, height):
-        self._allPeople.append(self)
-
-        self.name = name
-        self.age = age
-        self.height = height
-
-    #Checked
-    Jeff = Person("Jeff", 20, "1.6")
-    RegularActive.present.me = ['portō', 'doceō', 'trahō', 'audiō']
-    RegularActive.present.yous = ['portās', 'docēs', 'trahis', 'audīs']
-    RegularActive.present.it.append(['portat', 'docet', 'trahit', 'audit'])
-    RegularActive.present.we.append(['portāmus', 'docēmus', 'trahimus', 'audīmus'])
-    RegularActive.present.youpl.append(['portātis', 'docētis', 'trahitis', 'audītis'])
-    RegularActive.present.they.append(['portant', 'docent', 'trahunt', 'audiunt'])
-
-    for person in RegularActive.present:
-       print(RegularActive.present.me)
+#Checked
+RegularActive.present.me = ['portō', 'doceō', 'trahō', 'audiō']
+RegularActive.present.yous = ['portās', 'docēs', 'trahis', 'audīs']
+RegularActive.present.it.append(['portat', 'docet', 'trahit', 'audit'])
+RegularActive.present.we.append(['portāmus', 'docēmus', 'trahimus', 'audīmus'])
+RegularActive.present.youpl.append(['portātis', 'docētis', 'trahitis', 'audītis'])
+RegularActive.present.they.append(['portant', 'docent', 'trahunt', 'audiunt'])
 
 #
 RegularActive.imperfect.me.append(['portābam', 'docēbam', 'trahēbam', 'audiēbam'])
