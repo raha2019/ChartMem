@@ -20,16 +20,16 @@ def row_by_row(data):
 
     print('rows: {}  columns: {}'.format(rows, columns))
 
-def safedata():
-    k = 0
-    
-    try:
-        savedData = open(k+"out.csv", "w", newline="")
-        writer = csv.writer(savedData)
-        writer.writerows(data)
-    except FileNotFoundError:
-        k += 1
-        newSavedData = open(k+"out.csv", "w", newline="")
+# def safedata():
+#     k = 0
+#
+#     try:
+#         savedData = open(k+"out.csv", "w", newline="")
+#         writer = csv.writer(savedData)
+#         writer.writerows(data)
+#     except FileNotFoundError:
+#         k += 1
+#         newSavedData = open(k+"out.csv", "w", newline="")
 
 def column_by_column():
     print("joe")
@@ -38,11 +38,20 @@ if __name__ == '__main__':
     data = [['input1', 'input2'],
             ['input3', 'input4'],
             ['input5', 'input6']]
+    print(data)
+    row_by_row(data)
     numRows = int(len(data))
     numColumns = int(len(data[0]))
-    safedata()
-    clearRow(numRows)
+    data.pop(0)
+    print(data)
+
+    #safedata()
     row_by_row(data)
+    #clearRow(numRows)
+
+
+
+
 
 
     # myList =
